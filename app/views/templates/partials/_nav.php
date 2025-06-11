@@ -12,7 +12,7 @@
     </button>
 
     <div class="hidden md:flex items-center">
-        <a class="text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700" href="#">Monstres</a>
+        <a class="text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700" href="?monstersPage">Monstres</a>
         <a class="text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 active" href="#">Ajouter un
             monstre</a>
         <!-- <a
