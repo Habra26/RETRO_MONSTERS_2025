@@ -9,7 +9,7 @@ function indexAction(PDO $connexion) {
     // Demande des données aux modèles
     
     include_once '../app/models/monstersModel.php';
-    $monsters = \App\Models\Monstersmodel\findAll($connexion);
+    $monsters = \App\Models\Monstersmodel\findAll($connexion, 9);
 
     // Charger la vue 'home' dans $content
 

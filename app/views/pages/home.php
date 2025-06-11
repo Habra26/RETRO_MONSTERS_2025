@@ -54,6 +54,10 @@
                         <strong class="text-white">Rareté:</strong>
                         <span class="text-gray-300"><?php echo $randomMonster['rarity']; ?></span>
                     </div>
+                    <div>
+                        <strong class="text-white">Date d'ajout:</strong>
+                        <span class="text-gray-300"><?php echo $randomMonster['created_at']; ?></span>
+                    </div>
                 </div>
                 <div class="mb-4">
                     <span class="text-yellow-400">★★★★☆</span>

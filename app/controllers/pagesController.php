@@ -11,7 +11,7 @@ function homeAction(PDO $connexion) {
     $randomMonster = \App\Models\RandomMonsterModel\findOne($connexion);
 
     include_once '../app/models/monstersModel.php';
-    $monsters = \App\Models\Monstersmodel\findAll($connexion);
+    $monsters = \App\Models\Monstersmodel\findAll($connexion, 3);
 
     // Charger la vue 'home' dans $content
 
