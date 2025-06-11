@@ -3,11 +3,9 @@
 
 // ROUTE DES MONSTERS
 // PATTERN: /?monstersPage
-// CTRL: monstersPageController
-// ACTION: indexAction
+
 if(isset($_GET['monstersPage'])):
-    include_once '../app/controllers/monstersPageController.php';
-    App\Controllers\MonsterPageController\indexAction($connexion);
+    include_once '../app/routers/monsters.php';
 
 // ROUTE PAR DEFAUT
 // PATTERN : /

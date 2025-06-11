@@ -1,6 +1,6 @@
 <!-- Section Monstre Aléatoire -->
 <section class="mb-20">
-    <div class="bg-gray-700 rounded-lg shadow-lg monster-card" data-monster-type="aquatique">
+    <div class="bg-gray-700 rounded-lg shadow-lg monster-card" data-monster-type="<?php echo $randomMonster['type_name']; ?>">
         <div class="md:flex">
             <!-- Image du monstre -->
             <div class="w-full md:w-1/2 relative">
@@ -64,7 +64,7 @@
                     <span class="text-gray-300 text-sm">(4.0/5.0)</span>
                 </div>
                 <div class="">
-                    <a href="monster.html"
+                    <a href="?monstersPage=show&id=<?php echo $randomMonster['id']; ?>"
                         class="inline-block text-white bg-red-500 hover:bg-red-700 rounded-full px-4 py-2 transition-colors duration-300">Plus
                         de détails</a>
                 </div>

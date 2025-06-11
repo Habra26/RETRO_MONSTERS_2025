@@ -3,7 +3,7 @@
     <?php foreach ($monsters as $monster): ?>
         <article
             class="relative bg-gray-700 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 monster-card"
-            data-monster-type="spectral">
+            data-monster-type="<?php echo $monster['type_name']; ?>">
             <img class="w-full h-48 object-cover rounded-t-lg" src="../public/images/<?php echo $monster['image_url']; ?>"
                 alt="<?php echo $monster['name']; ?>" />
             <div class="p-4">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="text-center">
                     <span class="text-sm text-gray-300">Date d'ajout: <?php echo $monster['created_at']; ?></span>
-                    <a href="monster.html"
+                    <a href="?monstersPage=show&id=<?php echo $monster['id']; ?>"
                         class="inline-block text-white bg-red-500 hover:bg-red-700 rounded-full mt-4 px-4 py-2 transition-colors duration-300">Plus
                         de détails</a>
                 </div>
