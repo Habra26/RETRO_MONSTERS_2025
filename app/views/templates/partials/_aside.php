@@ -16,20 +16,23 @@
         <!-- Type -->
         <select name="type" class="w-full p-2 mb-4 bg-gray-800 rounded">
             <option value="" disabled selected>Choisir un type</option>
-            <option value="aquatique">Aquatique</option>
-            <option value="terrestre">Terrestre</option>
-            <option value="volant">Volant</option>
-            <option value="cosmique">Cosmique</option>
-            <option value="spectral">Spectral</option>
+            <?php
+            include_once '../app/models/typesModel.php';
+            $types = \App\Models\TypesModel\findAll($connexion); 
+            foreach ($types as $type) : ?>
+                <option value="<?php echo $type['name'] ?>"><?php echo $type['name'] ?></option>
+            <?php endforeach; ?> 
         </select>
 
         <!-- Rareté -->
         <select name="rarete" class="w-full p-2 mb-4 bg-gray-800 rounded">
             <option value="" disabled selected>Choisir une rareté</option>
-            <option value="commun">Commun</option>
-            <option value="rare">Rare</option>
-            <option value="epique">Épique</option>
-            <option value="legendaire">Légendaire</option>
+            <?php
+            include_once '../app/models/raresModel.php';
+            $rares = \App\Models\raresModel\findAll($connexion); 
+            foreach ($rares as $rare) : ?>
+                <option value="<?php echo $rare['name'] ?>"><?php echo $rare['name'] ?></option>
+            <?php endforeach; ?> 
         </select>
 
         <!-- PV -->
